@@ -18,5 +18,5 @@ root model =
 
 msgViewArticle id =
     RoutingMsg <|
-        ArticleMsg <|
+        ArticlesMsg <|
             ArticlesPage.ViewArticle id

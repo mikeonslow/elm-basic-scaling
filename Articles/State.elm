@@ -2,9 +2,6 @@ module Articles.State exposing (init, update, subscriptions)
 
 import Types exposing (..)
 import Articles.Types as ArticlesPage
-import Routes exposing (..)
-import Monocle.Lens exposing (..)
-import Navigation exposing (Location)
 
 
 init : ( ArticlesPage.Model, Cmd ArticlesPage.Msg )
@@ -15,10 +12,7 @@ init =
     )
 
 
-
---update : ArticlesPage.Msg -> ArticlesPage.Model -> ( ArticlesPage.Model, Cmd ArticlesPage.Msg )
-
-
+update : ArticlesPage.Msg -> a -> ( a, Cmd msg )
 update msg model =
     case msg of
         ArticlesPage.ViewArticle id ->
@@ -26,6 +20,7 @@ update msg model =
 
         _ ->
             ( model, Cmd.none )
+
 
 
 

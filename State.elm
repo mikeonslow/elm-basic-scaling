@@ -19,7 +19,6 @@ init config route =
     )
 
 
-
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -44,8 +43,9 @@ update msg model =
         NoOp ->
             ( model, Cmd.none )
 
-updatePage
-    : RoutingMsg
+
+updatePage :
+    RoutingMsg
     -> { c | membersPage : b, articlesPage : a }
     -> ( { c | articlesPage : a, membersPage : b }, Cmd msg )
 updatePage routingMsg model =
@@ -83,11 +83,12 @@ subscriptions model =
 
 -- HELPERS
 
+
 setRoute : a -> { c | route : b } -> { c | route : a }
 setRoute route model =
     { model | route = route }
 
-setRoutePath : a -> { c | routePath : b } -> { c | routePath : a }
 
+setRoutePath : a -> { c | routePath : b } -> { c | routePath : a }
 setRoutePath routePath model =
     { model | routePath = routePath }

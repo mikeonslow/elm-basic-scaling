@@ -6,6 +6,7 @@ import Html.Events exposing (onClick, onCheck, onInput, targetValue)
 import Types exposing (..)
 import Routes exposing (..)
 import Members.View as MembersPage
+import Articles.View as ArticlesPage
 
 
 root : Model -> Html Msg
@@ -15,6 +16,9 @@ root model =
             case model.route of
                 Members ->
                     MembersPage.root model
+
+                Articles ->
+                    ArticlesPage.root model
 
                 _ ->
                     div [] [ text "View not defined" ]
