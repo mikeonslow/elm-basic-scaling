@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Elm App Scaling Test</title>
+</head>
+<body>
+<div id="elm-main"></div>
+<script src="app.js"></script>
+<script>
+  var elmDiv = document.getElementById('elm-main')
+      , elmApp = Elm.App.embed(elmDiv,"session_id")
+</script>
+</body>
+</html>
