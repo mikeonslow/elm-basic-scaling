@@ -24,7 +24,8 @@ Your top level file should named `App.elm` and should contain only the code nece
            , update = State.update
            , subscriptions = State.subscriptions
            , view = View.root
-           }```
+           }
+```
 
 ### References and sources of Inspiration
 1. The Elm Architecture: https://guide.elm-lang.org/architecture/
