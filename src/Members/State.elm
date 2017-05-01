@@ -11,6 +11,7 @@ init =
     , Cmd.none
     )
 
+
 update : MembersPage.Msg -> a -> ( a, Cmd msg )
 update msg model =
     case msg of
