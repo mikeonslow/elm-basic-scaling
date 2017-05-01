@@ -9,22 +9,23 @@ Define a basic patten for scaling Elm apps in accordance with TEA (The Elm Archi
 
 Your top level file should named `App.elm` and should contain only the code necessary to bootstrap the project
 
-```module App exposing (main)
+```elm
+module App exposing (main)
 
-   import Navigation
-   import State
-   import Types exposing (..)
-   import View
+import Navigation
+import State
+import Types exposing (..)
+import View
 
 
-   main : Program Config Model Msg
-   main =
-       Navigation.programWithFlags OnLocationChange
-           { init = State.init
-           , update = State.update
-           , subscriptions = State.subscriptions
-           , view = View.root
-           }
+main : Program Config Model Msg
+main =
+    Navigation.programWithFlags OnLocationChange
+        { init = State.init
+        , update = State.update
+        , subscriptions = State.subscriptions
+        , view = View.root
+        }
 ```
 
 ### References and sources of Inspiration
